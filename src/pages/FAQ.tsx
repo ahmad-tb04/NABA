@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Navigation } from "@/components/Navigation";
 import { TrianglePattern } from "@/components/TrianglePattern";
 import {
   Accordion,
@@ -42,8 +41,6 @@ const FAQ = () => {
   
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 overflow-hidden">
         <TrianglePattern />
