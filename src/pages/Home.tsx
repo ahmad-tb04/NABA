@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Navigation } from "@/components/Navigation";
 import { TrianglePattern } from "@/components/TrianglePattern";
 import { FeatureCard } from "@/components/FeatureCard";
 import { Brain, TrendingUp, Package, Target, Boxes, Lightbulb } from "lucide-react";
@@ -8,8 +7,6 @@ import { Brain, TrendingUp, Package, Target, Boxes, Lightbulb } from "lucide-rea
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
         <TrianglePattern />
