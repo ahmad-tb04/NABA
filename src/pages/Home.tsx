@@ -1,116 +1,144 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { TrianglePattern } from "@/components/TrianglePattern";
 import { FeatureCard } from "@/components/FeatureCard";
-import { Brain, TrendingUp, Package, Target, Boxes, Lightbulb } from "lucide-react";
+import { FloatingOrb } from "@/components/FloatingOrb";
+import { FlowingShape } from "@/components/FlowingShape";
+import { Brain, TrendingUp, Package, Boxes, Lightbulb, ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-[#001a3d] via-[#002952] to-[#000b1f] relative overflow-hidden">
+      {/* Flowing Background Shapes */}
+      <FlowingShape variant="wave1" className="top-0 left-0 w-full h-[600px]" />
+      <FlowingShape variant="wave2" className="top-40 right-0 w-full h-[500px]" />
+      <FlowingShape variant="wave3" className="bottom-0 left-0 w-full h-[700px]" />
+      
+      {/* Floating Orbs */}
+      <FloatingOrb size={180} top="10%" left="8%" delay={0} />
+      <FloatingOrb size={120} top="15%" right="12%" delay={1.5} duration={8} />
+      <FloatingOrb size={100} top="60%" left="15%" delay={3} duration={7} />
+      <FloatingOrb size={140} bottom="10%" right="18%" delay={2} duration={9} />
+      <FloatingOrb size={80} top="45%" right="8%" delay={4} duration={6} />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 overflow-hidden">
-        <TrianglePattern />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
+      <section className="relative pt-40 pb-32 px-6 z-10">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-5xl mx-auto text-center"
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-block mb-8"
             >
-              <div className="bg-accent/10 border-2 border-accent/30 rounded-full px-6 py-2 text-accent font-semibold">
-                94% Accuracy
+              <div className="glass-card rounded-full px-8 py-3 text-accent font-bold text-lg shadow-yellow-glow">
+                🎯 94% Accuracy
               </div>
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              AI-Powered Inventory Intelligence for{" "}
-              <span className="text-gradient">Smarter, Faster</span> Decisions
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight text-white">
+              AI-Powered Inventory
+              <br />
+              Intelligence for{" "}
+              <span className="text-gradient">Smarter, Faster</span>
+              <br />
+              Decisions
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-              Naba helps companies optimize stock, reduce losses, and forecast demand with high accuracy.
+            <p className="text-xl md:text-2xl text-blue-100/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+              Naba helps companies optimize stock, reduce losses, and forecast demand with high accuracy using intelligent AI-driven predictions.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="hero" size="lg" className="min-w-[200px]">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button
+                size="lg"
+                className="min-w-[220px] h-14 text-lg font-semibold bg-accent hover:bg-accent/90 text-accent-foreground rounded-2xl shadow-yellow-glow transition-all hover:scale-105 hover:shadow-[0_0_80px_rgba(245,196,0,0.5)]"
+              >
                 Request Partnership
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="hero-outline" size="lg" className="min-w-[200px]">
+              <Button
+                variant="outline"
+                size="lg"
+                className="min-w-[220px] h-14 text-lg font-semibold bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-2xl backdrop-blur-sm transition-all hover:scale-105"
+              >
                 Learn More
               </Button>
             </div>
           </motion.div>
         </div>
-        
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </section>
       
       {/* Core Feature Section */}
-      <section className="py-24 relative">
-        <div className="container mx-auto px-6">
+      <section className="py-32 relative z-10 px-6">
+        <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.7 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Our <span className="text-gradient">Core Feature</span>
             </h2>
           </motion.div>
           
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="relative"
+              transition={{ duration: 0.8 }}
+              className="relative group"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent rounded-3xl blur-2xl" />
+              {/* Glow Effect */}
+              <div className="absolute -inset-6 bg-accent/20 rounded-[3rem] blur-3xl group-hover:blur-[100px] transition-all duration-700" />
               
-              <div className="relative bg-card border-2 border-accent/30 rounded-3xl p-8 md:p-12 shadow-2xl">
-                <div className="grid md:grid-cols-3 gap-8 mb-8">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Brain className="w-8 h-8 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">AI-Powered Demand Forecasting</h3>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-8 h-8 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">Dynamic Lead-Time Prediction</h3>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Package className="w-8 h-8 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">Shipping Time Prediction</h3>
-                  </div>
+              <div className="relative glass-card rounded-[3rem] p-12 md:p-16 shadow-2xl">
+                <div className="grid md:grid-cols-3 gap-12 mb-12">
+                  {[
+                    { icon: Brain, title: "AI-Powered Demand Forecasting", delay: 0.1 },
+                    { icon: TrendingUp, title: "Dynamic Lead-Time Prediction", delay: 0.2 },
+                    { icon: Package, title: "Shipping Time Prediction", delay: 0.3 },
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: feature.delay }}
+                      whileHover={{ y: -10, scale: 1.05 }}
+                      className="text-center group/item"
+                    >
+                      <div className="w-24 h-24 glass-card rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover/item:shadow-yellow-glow transition-all duration-500">
+                        <feature.icon className="w-12 h-12 text-accent" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white leading-snug">
+                        {feature.title}
+                      </h3>
+                    </motion.div>
+                  ))}
                 </div>
                 
-                <div className="border-t-2 border-border pt-8">
-                  <p className="text-center text-muted-foreground text-lg leading-relaxed">
+                <div className="border-t border-white/20 pt-10">
+                  <p className="text-center text-blue-100/70 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
                     Naba continuously learns from company data, monitors patterns, and automatically 
-                    retrains the model to maintain high accuracy.
+                    retrains the model to maintain high accuracy across all predictions.
                   </p>
                   
-                  <div className="mt-6 flex justify-center">
-                    <div className="bg-accent text-accent-foreground font-bold text-3xl px-8 py-3 rounded-full shadow-yellow">
-                      Accuracy: 94%
-                    </div>
+                  <div className="flex justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="bg-gradient-to-r from-accent via-yellow-400 to-accent text-accent-foreground font-bold text-3xl px-12 py-5 rounded-full shadow-yellow-glow relative overflow-hidden"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
+                      <span className="relative">Accuracy: 94%</span>
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -120,60 +148,94 @@ const Home = () => {
       </section>
       
       {/* Additional Features Section */}
-      <section className="py-24 relative bg-muted/30">
-        <TrianglePattern />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Additional <span className="text-gradient">Key Features</span>
-            </h2>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <FeatureCard
-              icon={<Boxes className="w-12 h-12" />}
-              title="Unified Data Integration & Smart Inventory Optimization"
-              description="Connect all your data streams into one system and let Naba reduce dead-stock, prevent stockouts, and recommend optimized purchase decisions."
-              delay={0.1}
-            />
-            
-            <FeatureCard
-              icon={<Lightbulb className="w-12 h-12" />}
-              title="Scenario Simulation & What-If Analysis (XAI)"
-              description="Explore business scenarios, test outcomes, and make informed decisions through explainable AI simulations."
-              delay={0.2}
-            />
-          </div>
-        </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        <TrianglePattern />
-        
-        <div className="container mx-auto px-6 relative z-10">
+      <section className="py-32 relative z-10 px-6">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+              Additional <span className="text-gradient">Key Features</span>
+            </h2>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="glass-card rounded-3xl p-10 shadow-2xl group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <div className="relative z-10">
+                <div className="mb-6 text-accent">
+                  <Boxes className="w-14 h-14" />
+                </div>
+                <h3 className="text-2xl font-bold mb-5 text-white leading-tight">
+                  Unified Data Integration & Smart Inventory Optimization
+                </h3>
+                <p className="text-blue-100/70 leading-relaxed text-lg">
+                  Connect all your data streams into one system and let Naba reduce dead-stock, 
+                  prevent stockouts, and recommend optimized purchase decisions.
+                </p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="glass-card rounded-3xl p-10 shadow-2xl group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              <div className="relative z-10">
+                <div className="mb-6 text-accent">
+                  <Lightbulb className="w-14 h-14" />
+                </div>
+                <h3 className="text-2xl font-bold mb-5 text-white leading-tight">
+                  Scenario Simulation & What-If Analysis (XAI)
+                </h3>
+                <p className="text-blue-100/70 leading-relaxed text-lg">
+                  Explore business scenarios, test outcomes, and make informed decisions through 
+                  explainable AI simulations.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-32 relative z-10 px-6">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Inventory Management?
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
+              Ready to Transform Your
+              <br />
+              <span className="text-gradient">Inventory Management?</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-10">
+            <p className="text-xl text-blue-100/70 mb-12 leading-relaxed">
               Join leading companies using Naba to optimize their supply chain operations.
             </p>
-            <Button variant="hero" size="lg" className="min-w-[250px]">
+            <Button
+              size="lg"
+              className="min-w-[280px] h-16 text-xl font-semibold bg-accent hover:bg-accent/90 text-accent-foreground rounded-2xl shadow-yellow-glow transition-all hover:scale-105 hover:shadow-[0_0_100px_rgba(245,196,0,0.6)]"
+            >
               Get Started Today
+              <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
           </motion.div>
         </div>
