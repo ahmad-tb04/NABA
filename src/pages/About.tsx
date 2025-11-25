@@ -53,8 +53,8 @@ const About = () => {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#001F3F] via-[#002a57] to-[#000b18]">
       {/* Floating Orbs */}
-      <FloatingOrb size={180} top="15%" right="10%" delay={0} />
-      <FloatingOrb size={130} bottom="20%" left="5%" delay={1.5} />
+      <FloatingOrb size={180} top="18%" right="10%" delay={0} />
+      <FloatingOrb size={130} bottom="18%" left="5%" delay={1.5} />
       <FloatingOrb size={90} top="60%" right="15%" delay={2.5} />
 
       {/* Flowing Shapes */}

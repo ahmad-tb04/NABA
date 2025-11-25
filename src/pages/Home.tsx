@@ -27,10 +27,10 @@ const Home = () => {
       />
 
       {/* Floating Orbs */}
-      <FloatingOrb size={180} top="10%" left="8%" delay={0} />
-      <FloatingOrb size={120} top="15%" right="12%" delay={1.5} duration={8} />
+      <FloatingOrb size={160} top="15%" left="8%" delay={0} />
+      <FloatingOrb size={120} top="19%" right="12%" delay={1.5} duration={8} />
       <FloatingOrb size={100} top="60%" left="15%" delay={3} duration={7} />
-      <FloatingOrb size={140} bottom="10%" right="18%" delay={2} duration={9} />
+      <FloatingOrb size={140} bottom="12%" right="18%" delay={2} duration={9} />
       <FloatingOrb size={80} top="45%" right="8%" delay={4} duration={6} />
 
       {/* Hero Section */}
@@ -151,27 +151,26 @@ const Home = () => {
                   </p>
 
                   <div className="flex justify-center w-full">
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    className="
-      bg-gradient-to-r from-accent via-yellow-400 to-accent
-      text-accent-foreground font-bold
-      text-xl        /* mobile */
-      sm:text-2xl    /* small screens */
-      md:text-3xl    /* tablets & up */
-      px-6 py-3      /* mobile padding */
-      sm:px-10 sm:py-4
-      md:px-12 md:py-5
-      rounded-full shadow-yellow-glow relative overflow-hidden
-      text-center
-      w-fit mx-auto
-    "
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
-    <span className="relative">Accuracy: 94%</span>
-  </motion.div>
-</div>
-
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="
+                        bg-gradient-to-r from-accent via-yellow-400 to-accent
+                        text-accent-foreground font-bold
+                        text-xl        /* mobile */
+                        sm:text-2xl    /* small screens */
+                        md:text-3xl    /* tablets & up */
+                        px-6 py-3      /* mobile padding */
+                        sm:px-10 sm:py-4
+                        md:px-12 md:py-5
+                        rounded-full shadow-yellow-glow relative overflow-hidden
+                        text-center
+                        w-fit mx-auto
+                      "
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
+                      <span className="relative">Accuracy: 94%</span>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>
