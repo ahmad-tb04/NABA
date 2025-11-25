@@ -47,11 +47,7 @@ const Home = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-block mb-8"
-            >
-              <div className="glass-card rounded-full px-8 py-3 text-accent font-bold text-lg shadow-yellow-glow">
-                🎯 94% Accuracy
-              </div>
-            </motion.div>
+            ></motion.div>
 
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight text-white">
               AI-Powered Inventory
@@ -67,22 +63,7 @@ const Home = () => {
               demand with high accuracy using intelligent AI-driven predictions.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button
-                size="lg"
-                className="min-w-[220px] h-14 text-lg font-semibold bg-accent hover:bg-accent/90 text-accent-foreground rounded-2xl shadow-yellow-glow transition-all hover:scale-105 hover:shadow-[0_0_80px_rgba(245,196,0,0.5)]"
-              >
-                Request Partnership
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="min-w-[220px] h-14 text-lg font-semibold bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-2xl backdrop-blur-sm transition-all hover:scale-105"
-              >
-                Learn More
-              </Button>
-            </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center"></div>
           </motion.div>
         </div>
       </section>

@@ -7,45 +7,46 @@ import { Target, Users, Award } from "lucide-react";
 const About = () => {
   const team = [
     {
-      name: "Shamme Alkhawaldeh",
+      name: "Shamma Al-khawaldeh",
       major: "AI Engineering",
       year: "3rd Year",
       description:
         "Specializes in machine learning models and AI architecture design.",
-      linkedinUrl: "https://linkedin.com",
-      phone: "+962 7X XXX XXXX",
+      linkedinUrl: "https://www.linkedin.com/in/shamma-al-khawaldeh/",
+      phone: "+962 7 9711 4058",
     },
     {
       name: "Ola Amro",
-      major: "Data Science",
-      year: "3rd Year",
-      description: "Expert in data analysis and predictive modeling.",
-      linkedinUrl: "https://linkedin.com",
-      phone: "+962 7X XXX XXXX",
+      major: "Mechanical Engineering",
+      year: "5th Year",
+      description: "Expert in systems optimization and process engineering.",
+      linkedinUrl: "https://www.linkedin.com/in/ola-amro/",
+      phone: "+962 7 9730 8940",
     },
     {
-      name: "Aws Alswini",
-      major: "Software Engineering",
-      year: "3rd Year",
-      description: "Focuses on backend development and system architecture.",
-      linkedinUrl: "https://linkedin.com",
-      phone: "+962 7X XXX XXXX",
+      name: "Aws Abwini",
+      major: "Cyber Security",
+      year: "4th Year",
+      description: "Cloud infrastructure and security specialist.",
+      linkedinUrl: "https://www.linkedin.com/in/aws-abwini-47961a265/",
+      phone: "+962 7 9109 2884",
     },
     {
       name: "Raneem Khanji",
-      major: "Computer Science",
-      year: "3rd Year",
-      description: "Specializes in algorithms and optimization techniques.",
-      linkedinUrl: "https://linkedin.com",
-      phone: "+962 7X XXX XXXX",
+      major: "AI Engineering",
+      year: "4th Year",
+      description:
+        "Data scientist focused on AI-driven analytics and insights.",
+      linkedinUrl: "https://www.linkedin.com/in/raneemkhanji/",
+      phone: "+962 7 7555 2553",
     },
     {
-      name: "Ahamd Ibakhi",
-      major: "IT Engineering",
-      year: "3rd Year",
-      description: "Expert in system integration and cloud infrastructure.",
-      linkedinUrl: "https://linkedin.com",
-      phone: "+962 7X XXX XXXX",
+      name: "Ahamd Tbakhi",
+      major: "Computer Science",
+      year: "4th Year",
+      description: "Fullstack developer with a passion for AI integration.",
+      linkedinUrl: "https://www.linkedin.com/in/ahmad-tbakhi-085694338/",
+      phone: "+962 7 9532 2106",
     },
   ];
 
@@ -60,7 +61,7 @@ const About = () => {
       <FlowingShape variant="wave1" className="top-0 left-0 w-full h-full" />
       <FlowingShape variant="wave3" className="bottom-0 left-0 w-full h-full" />
 
-      {/* Hero Section */}
+      {/* Header */}
       <section className="pt-32 pb-20 relative z-10">
         <div className="container mx-auto px-6">
           <motion.div
@@ -97,9 +98,7 @@ const About = () => {
                 <span className="text-[#F5C400] font-semibold">
                   Al-Hussein Technical University
                 </span>{" "}
-                as part of an innovation challenge. We competed against students
-                from multiple universities across Jordan and were selected among
-                the{" "}
+                as part of an innovation challenge. We were selected among the{" "}
                 <span className="text-[#F5C400] font-semibold">
                   top winning teams
                 </span>
@@ -137,7 +136,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission */}
       <section className="py-32 relative z-10">
         <div className="container mx-auto px-6">
           <motion.div
@@ -147,7 +146,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <div className="glass-card rounded-3xl p-12 md:p-16 border-white/10 shadow-2xl">
+            <div className="glass-card rounded-3xl p-12 md:px-16 border-white/10 shadow-2xl">
               <div className="w-24 h-24 sphere-gradient rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_60px_rgba(245,196,0,0.5)]">
                 <Target
                   className="w-12 h-12 text-[#001F3F]"

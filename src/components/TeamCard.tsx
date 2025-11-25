@@ -41,10 +41,8 @@ export const TeamCard = ({
             </span>
           </div>
 
-          {/* Name */}
           <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
 
-          {/* Major + Year */}
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[#F5C400] font-semibold text-sm">
               {major}
@@ -59,13 +57,16 @@ export const TeamCard = ({
           {description}
         </p>
 
-        {/* Phone Number */}
-        <div className="flex items-center gap-2 text-white/80 text-sm mb-3">
+        {/* Phone (Clickable) */}
+        <a
+          href={`tel:${phone.replace(/\s+/g, "")}`}
+          className="inline-flex items-center gap-2 text-white/80 hover:text-[#F5C400] transition-colors duration-300 text-sm mb-3"
+        >
           <Phone className="w-4 h-4 text-[#F5C400]" />
-          <span>{phone}</span>
-        </div>
+          {phone}
+        </a>
 
-        {/* LinkedIn Link */}
+        {/* LinkedIn */}
         <a
           href={linkedinUrl}
           target="_blank"
