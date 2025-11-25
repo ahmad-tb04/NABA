@@ -1,22 +1,24 @@
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Phone } from "lucide-react";
 
 interface TeamCardProps {
   name: string;
   major: string;
   year: string;
   description: string;
+  phone: string;
   linkedinUrl: string;
   delay?: number;
 }
 
-export const TeamCard = ({ 
-  name, 
-  major, 
-  year, 
-  description, 
+export const TeamCard = ({
+  name,
+  major,
+  year,
+  description,
+  phone,
   linkedinUrl,
-  delay = 0 
+  delay = 0,
 }: TeamCardProps) => {
   return (
     <motion.div
@@ -28,32 +30,42 @@ export const TeamCard = ({
       className="glass-card rounded-3xl p-8 border-white/10 hover:border-[#F5C400]/30 transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(245,196,0,0.2)] group"
     >
       <div className="flex flex-col h-full">
+        {/* Avatar Initials */}
         <div className="mb-4">
           <div className="w-16 h-16 sphere-gradient rounded-2xl flex items-center justify-center mb-4 shadow-[0_0_40px_rgba(245,196,0,0.3)] group-hover:shadow-[0_0_60px_rgba(245,196,0,0.5)] transition-all duration-500">
             <span className="text-2xl font-bold text-[#001F3F]">
-              {name.split(' ').map(n => n[0]).join('')}
+              {name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
             </span>
           </div>
-          
-          <h3 className="text-2xl font-bold text-white mb-2">
-            {name}
-          </h3>
-          
+
+          {/* Name */}
+          <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
+
+          {/* Major + Year */}
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[#F5C400] font-semibold text-sm">
               {major}
             </span>
             <span className="text-white/40">•</span>
-            <span className="text-white/60 text-sm">
-              {year}
-            </span>
+            <span className="text-white/60 text-sm">{year}</span>
           </div>
         </div>
-        
+
+        {/* Description */}
         <p className="text-white/70 leading-relaxed mb-6 flex-grow">
           {description}
         </p>
-        
+
+        {/* Phone Number */}
+        <div className="flex items-center gap-2 text-white/80 text-sm mb-3">
+          <Phone className="w-4 h-4 text-[#F5C400]" />
+          <span>{phone}</span>
+        </div>
+
+        {/* LinkedIn Link */}
         <a
           href={linkedinUrl}
           target="_blank"

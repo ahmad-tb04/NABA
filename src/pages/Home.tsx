@@ -3,23 +3,36 @@ import { Button } from "@/components/ui/button";
 import { FeatureCard } from "@/components/FeatureCard";
 import { FloatingOrb } from "@/components/FloatingOrb";
 import { FlowingShape } from "@/components/FlowingShape";
-import { Brain, TrendingUp, Package, Boxes, Lightbulb, ArrowRight } from "lucide-react";
+import {
+  Brain,
+  TrendingUp,
+  Package,
+  Boxes,
+  Lightbulb,
+  ArrowRight,
+} from "lucide-react";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#001a3d] via-[#002952] to-[#000b1f] relative overflow-hidden">
       {/* Flowing Background Shapes */}
       <FlowingShape variant="wave1" className="top-0 left-0 w-full h-[600px]" />
-      <FlowingShape variant="wave2" className="top-40 right-0 w-full h-[500px]" />
-      <FlowingShape variant="wave3" className="bottom-0 left-0 w-full h-[700px]" />
-      
+      <FlowingShape
+        variant="wave2"
+        className="top-40 right-0 w-full h-[500px]"
+      />
+      <FlowingShape
+        variant="wave3"
+        className="bottom-0 left-0 w-full h-[700px]"
+      />
+
       {/* Floating Orbs */}
       <FloatingOrb size={180} top="10%" left="8%" delay={0} />
       <FloatingOrb size={120} top="15%" right="12%" delay={1.5} duration={8} />
       <FloatingOrb size={100} top="60%" left="15%" delay={3} duration={7} />
       <FloatingOrb size={140} bottom="10%" right="18%" delay={2} duration={9} />
       <FloatingOrb size={80} top="45%" right="8%" delay={4} duration={6} />
-      
+
       {/* Hero Section */}
       <section className="relative pt-40 pb-32 px-6 z-10">
         <div className="container mx-auto">
@@ -39,7 +52,7 @@ const Home = () => {
                 🎯 94% Accuracy
               </div>
             </motion.div>
-            
+
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight text-white">
               AI-Powered Inventory
               <br />
@@ -48,11 +61,12 @@ const Home = () => {
               <br />
               Decisions
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-blue-100/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-              Naba helps companies optimize stock, reduce losses, and forecast demand with high accuracy using intelligent AI-driven predictions.
+              Naba helps companies optimize stock, reduce losses, and forecast
+              demand with high accuracy using intelligent AI-driven predictions.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 size="lg"
@@ -72,7 +86,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Core Feature Section */}
       <section className="py-32 relative z-10 px-6">
         <div className="container mx-auto">
@@ -87,7 +101,7 @@ const Home = () => {
               Our <span className="text-gradient">Core Feature</span>
             </h2>
           </motion.div>
-          
+
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -98,13 +112,25 @@ const Home = () => {
             >
               {/* Glow Effect */}
               <div className="absolute -inset-6 bg-accent/20 rounded-[3rem] blur-3xl group-hover:blur-[100px] transition-all duration-700" />
-              
+
               <div className="relative glass-card rounded-[3rem] p-12 md:p-16 shadow-2xl">
                 <div className="grid md:grid-cols-3 gap-12 mb-12">
                   {[
-                    { icon: Brain, title: "AI-Powered Demand Forecasting", delay: 0.1 },
-                    { icon: TrendingUp, title: "Dynamic Lead-Time Prediction", delay: 0.2 },
-                    { icon: Package, title: "Shipping Time Prediction", delay: 0.3 },
+                    {
+                      icon: Brain,
+                      title: "AI-Powered Demand Forecasting",
+                      delay: 0.1,
+                    },
+                    {
+                      icon: TrendingUp,
+                      title: "Dynamic Lead-Time Prediction",
+                      delay: 0.2,
+                    },
+                    {
+                      icon: Package,
+                      title: "Shipping Time Prediction",
+                      delay: 0.3,
+                    },
                   ].map((feature, index) => (
                     <motion.div
                       key={index}
@@ -124,13 +150,14 @@ const Home = () => {
                     </motion.div>
                   ))}
                 </div>
-                
+
                 <div className="border-t border-white/20 pt-10">
                   <p className="text-center text-blue-100/70 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-                    Naba continuously learns from company data, monitors patterns, and automatically 
-                    retrains the model to maintain high accuracy across all predictions.
+                    Naba continuously learns from company data, monitors
+                    patterns, and automatically retrains the model to maintain
+                    high accuracy across all predictions.
                   </p>
-                  
+
                   <div className="flex justify-center">
                     <motion.div
                       whileHover={{ scale: 1.05 }}
@@ -146,7 +173,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Additional Features Section */}
       <section className="py-32 relative z-10 px-6">
         <div className="container mx-auto">
@@ -161,7 +188,7 @@ const Home = () => {
               Additional <span className="text-gradient">Key Features</span>
             </h2>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -180,12 +207,13 @@ const Home = () => {
                   Unified Data Integration & Smart Inventory Optimization
                 </h3>
                 <p className="text-blue-100/70 leading-relaxed text-lg">
-                  Connect all your data streams into one system and let Naba reduce dead-stock, 
-                  prevent stockouts, and recommend optimized purchase decisions.
+                  Connect all your data streams into one system and let Naba
+                  reduce dead-stock, prevent stockouts, and recommend optimized
+                  purchase decisions.
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -203,15 +231,15 @@ const Home = () => {
                   Scenario Simulation & What-If Analysis (XAI)
                 </h3>
                 <p className="text-blue-100/70 leading-relaxed text-lg">
-                  Explore business scenarios, test outcomes, and make informed decisions through 
-                  explainable AI simulations.
+                  Explore business scenarios, test outcomes, and make informed
+                  decisions through explainable AI simulations.
                 </p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-32 relative z-10 px-6">
         <div className="container mx-auto">
@@ -228,15 +256,9 @@ const Home = () => {
               <span className="text-gradient">Inventory Management?</span>
             </h2>
             <p className="text-xl text-blue-100/70 mb-12 leading-relaxed">
-              Join leading companies using Naba to optimize their supply chain operations.
+              Join leading companies using Naba to optimize their supply chain
+              operations.
             </p>
-            <Button
-              size="lg"
-              className="min-w-[280px] h-16 text-xl font-semibold bg-accent hover:bg-accent/90 text-accent-foreground rounded-2xl shadow-yellow-glow transition-all hover:scale-105 hover:shadow-[0_0_100px_rgba(245,196,0,0.6)]"
-            >
-              Get Started Today
-              <ArrowRight className="ml-3 w-6 h-6" />
-            </Button>
           </motion.div>
         </div>
       </section>
