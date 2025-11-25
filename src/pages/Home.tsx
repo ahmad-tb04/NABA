@@ -49,16 +49,27 @@ const Home = () => {
               className="inline-block mb-8"
             ></motion.div>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight text-white">
-              AI-Powered Inventory
-              <br />
-              Intelligence for{" "}
-              <span className="text-gradient">Smarter, Faster</span>
-              <br />
-              Decisions
-            </h1>
+            <div className="glass-card px-10 py-12 rounded-3xl mx-auto max-w-5xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl">
+              <h1 className="
+                text-3xl                /* mobile */
+                sm:text-5xl             /* small screens */
+                md:text-6xl             /* tablets */
+                lg:text-7xl             /* laptops */
+                xl:text-8xl             /* desktops */
+                font-extrabold mb-8 leading-tight text-white text-center
+              ">
+                AI-Powered Inventory
+                <br />
+                Intelligence for{" "}
+                <span className="text-gradient">Smarter, Faster</span>
+                <br />
+                Decisions
+              </h1>
 
-            <p className="text-xl md:text-2xl text-blue-100/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            </div>
+
+
+            <p className="text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto leading-relaxed font-light">
               Naba helps companies optimize stock, reduce losses, and forecast
               demand with high accuracy using intelligent AI-driven predictions.
             </p>
@@ -139,15 +150,28 @@ const Home = () => {
                     high accuracy across all predictions.
                   </p>
 
-                  <div className="flex justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="bg-gradient-to-r from-accent via-yellow-400 to-accent text-accent-foreground font-bold text-3xl px-12 py-5 rounded-full shadow-yellow-glow relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
-                      <span className="relative">Accuracy: 94%</span>
-                    </motion.div>
-                  </div>
+                  <div className="flex justify-center w-full">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="
+      bg-gradient-to-r from-accent via-yellow-400 to-accent
+      text-accent-foreground font-bold
+      text-xl        /* mobile */
+      sm:text-2xl    /* small screens */
+      md:text-3xl    /* tablets & up */
+      px-6 py-3      /* mobile padding */
+      sm:px-10 sm:py-4
+      md:px-12 md:py-5
+      rounded-full shadow-yellow-glow relative overflow-hidden
+      text-center
+      w-fit mx-auto
+    "
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
+    <span className="relative">Accuracy: 94%</span>
+  </motion.div>
+</div>
+
                 </div>
               </div>
             </motion.div>
